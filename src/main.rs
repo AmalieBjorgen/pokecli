@@ -13,7 +13,10 @@ async fn main() {
     let input_pokemon = &args[2];
 
     match poke_method.as_str() {
-        "list" => getter::get_pokedex().await,
+        "list" => match getter::get_pokedex().await {
+            Ok(body) => formatter::format_pokedex(&body),
+            Err(e) => println!("Error: {}", e),
+        },
         "search" => match getter::get_pokemon(input_pokemon).await {
             Ok(body) => formatter::format_pokemon(&body),
             Err(e) => println!("Error: {}", e),

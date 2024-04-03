@@ -32,3 +32,14 @@ pub struct Pokemon {
     pub stats: Vec<Stats>,
     pub types: Vec<Types>, 
 }
+
+#[derive(Debug, Serialize, Deserialize)]
+pub struct PokemonDetail {
+    pub name: String,
+    pub url: String
+}
+
+#[derive(Debug, Serialize, Deserialize)]
+pub struct Pokedex {
+    pub results: Vec<PokemonDetail>
+}
