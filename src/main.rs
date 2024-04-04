@@ -24,7 +24,7 @@ async fn main() {
             println!("pokecli pokedex: This command will display the Pokedex.");
             println!("pokecli pokemon <pokemon_name>: This command will display the information of the Pokemon.");
         }
-         _ => println!("No valid input given. Type pokecli help for additional information.")
+         _ => println!("Type pokecli help for additional information.")
 
     }
 
