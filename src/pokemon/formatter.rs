@@ -1,8 +1,5 @@
 
-
-
-
-use crate::structs::{Pokedex, Pokemon};
+use crate::pokemon::structs::{Pokedex, Pokemon};
 
 pub fn format_pokemon(pokemon_json: &str) {
     let pokemon_deserialised: Pokemon = serde_json::from_str(&pokemon_json).unwrap();

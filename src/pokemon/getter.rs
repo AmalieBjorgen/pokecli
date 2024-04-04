@@ -1,8 +1,4 @@
 
-
-
-
-
 pub async fn get_pokemon(pokemon: &str) -> Result<String, reqwest::Error> {
 
     let mut url = "https://pokeapi.co/api/v2/pokemon/".to_owned();
