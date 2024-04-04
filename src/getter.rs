@@ -1,7 +1,7 @@
-use std::string;
 
-use http::{response, Request, Response};
-use serde::{Deserialize, Serialize};
+
+
+
 
 pub async fn get_pokemon(pokemon: &str) -> Result<String, reqwest::Error> {
 

@@ -1,7 +1,7 @@
-use std::{env, process::ExitCode};
+use std::{env};
 
-use http::method;
-use reqwest::Body;
+
+
 
 mod getter;
 mod structs;
