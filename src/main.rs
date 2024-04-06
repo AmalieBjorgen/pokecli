@@ -2,9 +2,12 @@ use std::env;
 
 use pokemon::{formatter as pokemon_formatter, getter as pokemon_getter};
 use berry::{formatter as berry_formatter, getter as berry_getter};
+use item::{formatter as item_formatter, getter as item_getter};
+use r#move::{formatter as move_formatter, getter as move_getter};
 mod pokemon;
 mod berry;
 mod item;
+mod r#move;
 
 #[tokio::main]
 async fn main() {
@@ -38,11 +41,15 @@ async fn main() {
                 Ok(body) => berry_formatter::beautify_berry_output(body),
                 Err(e) => println!("Error: {}", e),
             },
-            "move" => match pokemon_getter::get_pokemon(input).await {
-                Ok(body) => pokemon_formatter::format_pokemon(&body),
+            "move" => match move_getter::get_move(input).await {
+                Ok(body) => move_formatter::format_move(&body),
                 Err(e) => println!("Error: {}", e),
             },
-            "item" => match pokemon_getter::get_pokemon(input).await {
+            "item" => match item_getter::get_item(input).await {
+                Ok(body) => item_formatter::format_item(&body),
+                Err(e) => println!("Error: {}", e),
+            },
+            "ability" => match pokemon_getter::get_pokemon(input).await {
                 Ok(body) => pokemon_formatter::format_pokemon(&body),
                 Err(e) => println!("Error: {}", e),
             },

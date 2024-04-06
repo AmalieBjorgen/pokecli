@@ -8,8 +8,8 @@ pub struct StatDetail {
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct Stats {
-    pub base_stat: i8,
-    pub effort: i8,
+    pub base_stat: u8,
+    pub effort: u8,
     pub stat: StatDetail,
 }
 
