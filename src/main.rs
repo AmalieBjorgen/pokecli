@@ -6,8 +6,6 @@ mod pokemon;
 #[tokio::main]
 async fn main() {
     let args: Vec<String> = env::args().collect();
-    println!("{:?}", args);
-    println!("{:?}", args.len());
     if args.len() == 1 || args.len() >= 4 {
         println!("Bad input. Type pokecli help for additional information.");
         std::process::exit(1);
