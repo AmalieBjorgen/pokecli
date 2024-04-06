@@ -1,4 +1,3 @@
-
 use crate::pokemon::structs::{Pokedex, Pokemon};
 
 pub fn format_pokemon(pokemon_json: &str) {

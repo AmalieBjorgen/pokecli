@@ -16,13 +16,13 @@ pub struct Stats {
 #[derive(Debug, Serialize, Deserialize)]
 pub struct TypeDetail {
     pub name: String,
-    pub url: String
+    pub url: String,
 }
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct Types {
     pub slot: i8,
-    pub r#type: TypeDetail
+    pub r#type: TypeDetail,
 }
 
 #[derive(Debug, Serialize, Deserialize)]
@@ -30,16 +30,16 @@ pub struct Pokemon {
     pub id: i16,
     pub name: String,
     pub stats: Vec<Stats>,
-    pub types: Vec<Types>, 
+    pub types: Vec<Types>,
 }
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct PokemonDetail {
     pub name: String,
-    pub url: String
+    pub url: String,
 }
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct Pokedex {
-    pub results: Vec<PokemonDetail>
+    pub results: Vec<PokemonDetail>,
 }
