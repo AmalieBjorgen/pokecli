@@ -30,6 +30,10 @@ async fn main() {
                 println!("pokecli help: This command will display the help menu.");
                 println!("pokecli pokedex: This command will display the Pokedex.");
                 println!("pokecli pokemon <pokemon_name>: This command will display the information of the Pokemon.");
+                println!("pokecli berry <berry_name>: This command will display the information of the Berry.");
+                println!("pokecli move <move_name>: This command will display the information of the Move.");
+                println!("pokecli item <item_name>: This command will display the information of the Item.");
+                println!("pokecli ability <ability_name>: This command will display the information of the Ability.");
             }
             _ => println!("Type pokecli help for additional information."),
         }
