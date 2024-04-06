@@ -5,5 +5,4 @@ pub async fn get_ability(ability: &str) -> Result<String, reqwest::Error> {
     let body = response.text().await?;
 
     Ok(body)
-    
 }

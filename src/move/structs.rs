@@ -15,7 +15,7 @@ pub struct Move {
     pub names: Vec<Names>,
     pub target: Target,
     pub priority: i8,
-    pub meta : Meta,
+    pub meta: Meta,
 }
 
 #[derive(Debug, Serialize, Deserialize)]

@@ -7,7 +7,7 @@ pub struct Ability {
     pub is_main_series: bool,
     pub names: Vec<Names>,
     pub effect_entries: Vec<EffectEntry>,
-    pub generation: Generation
+    pub generation: Generation,
 }
 
 #[derive(Debug, Serialize, Deserialize)]
