@@ -4,10 +4,13 @@ use pokemon::{formatter as pokemon_formatter, getter as pokemon_getter};
 use berry::{formatter as berry_formatter, getter as berry_getter};
 use item::{formatter as item_formatter, getter as item_getter};
 use r#move::{formatter as move_formatter, getter as move_getter};
+use ability::{formatter as ability_formatter, getter as ability_getter};
+
 mod pokemon;
 mod berry;
 mod item;
 mod r#move;
+mod ability;
 
 #[tokio::main]
 async fn main() {
@@ -49,8 +52,8 @@ async fn main() {
                 Ok(body) => item_formatter::format_item(&body),
                 Err(e) => println!("Error: {}", e),
             },
-            "ability" => match pokemon_getter::get_pokemon(input).await {
-                Ok(body) => pokemon_formatter::format_pokemon(&body),
+            "ability" => match ability_getter::get_ability(input).await {
+                Ok(body) => ability_formatter::format_ability(&body),
                 Err(e) => println!("Error: {}", e),
             },
             _ => println!("Type pokecli help for additional information."),
