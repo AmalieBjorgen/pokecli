@@ -6,8 +6,13 @@ pub fn format_move(move_json: &str) {
 }
 
 fn beautify_move_output(move_json: &Move) {
+    let english_name = move_json
+        .names
+        .iter()
+        .find(|name| name.language.name == "en")
+        .unwrap();
     println!("---------------------------------------");
-    println!("Name: {}", move_json.names[0].name); // TODO: Make this always print the English name
+    println!("Name: {}", english_name.name);
     println!("Type: {}", move_json.r#type.name);
     println!("Power: {}", move_json.power);
     println!("Damage Class: {}", move_json.damage_class.name);

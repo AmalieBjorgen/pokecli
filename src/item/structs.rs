@@ -3,8 +3,8 @@ use serde::{Deserialize, Serialize};
 #[derive(Debug, Serialize, Deserialize)]
 pub struct Item {
     pub name: String,
-    pub id: i16,
-    pub cost: i16,
+    pub id: u16,
+    pub cost: u16,
     pub effect_entries: Vec<EffectEntry>,
     pub flavor_text_entries: Vec<FlavorTextEntry>,
 }
