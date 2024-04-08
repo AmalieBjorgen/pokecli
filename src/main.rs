@@ -10,9 +10,7 @@ mod ability;
 mod berry;
 mod item;
 mod r#move;
-mod utils;
 mod pokemon;
-
 
 #[tokio::main]
 async fn main() {
