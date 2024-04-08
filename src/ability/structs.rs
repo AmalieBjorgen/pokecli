@@ -2,7 +2,7 @@ use serde::{Deserialize, Serialize};
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct Ability {
-    pub id: i16,
+    pub id: u16,
     pub name: String,
     pub is_main_series: bool,
     pub names: Vec<Names>,

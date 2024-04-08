@@ -3,9 +3,9 @@ use serde::{Deserialize, Serialize};
 #[derive(Debug, Serialize, Deserialize)]
 pub struct Move {
     pub name: String,
-    pub id: i16,
-    pub accuracy: i8,
-    pub pp: i8,
+    pub id: u16,
+    pub accuracy: u8,
+    pub pp: u8,
     pub power: u8,
     pub effect_chance: Option<i8>,
     pub effect_entries: Vec<EffectEntry>,
