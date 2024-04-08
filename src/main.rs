@@ -1,17 +1,18 @@
 use std::env;
 
-use pokemon::{formatter as pokemon_formatter, getter as pokemon_getter};
+use ability::{formatter as ability_formatter, getter as ability_getter};
 use berry::{formatter as berry_formatter, getter as berry_getter};
 use item::{formatter as item_formatter, getter as item_getter};
+use pokemon::{formatter as pokemon_formatter, getter as pokemon_getter};
 use r#move::{formatter as move_formatter, getter as move_getter};
-use ability::{formatter as ability_formatter, getter as ability_getter};
 
-mod pokemon;
+mod ability;
 mod berry;
 mod item;
 mod r#move;
 mod ability;
 mod utils;
+mod pokemon;
 
 
 #[tokio::main]

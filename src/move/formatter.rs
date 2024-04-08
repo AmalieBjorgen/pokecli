@@ -15,7 +15,10 @@ fn beautify_move_output(move_json: &Move) {
     println!("Accuracy: {}", move_json.accuracy);
     println!("Priority: {}", move_json.priority);
     println!("Effect: {}", move_json.effect_entries[0].short_effect);
-    println!("Description: {}", move_json.flavor_text_entries[0].flavor_text);
+    println!(
+        "Description: {}",
+        move_json.flavor_text_entries[0].flavor_text
+    );
     println!("Target: {}", move_json.target.name);
     println!("Ailment Effect: {}", move_json.meta.ailment.name);
     println!("Ailment Chance: {:?}", move_json.meta.ailment_chance);

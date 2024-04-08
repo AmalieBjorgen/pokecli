@@ -12,7 +12,7 @@ pub async fn get_berry(berry: &str) -> Result<(Berry, Item), reqwest::Error> {
             let berry_deserialised: Berry = serde_json::from_str(&berry_json).unwrap();
             let item = get_berry_as_item(&berry_deserialised).await.unwrap();
             let item_deserialised: Item = serde_json::from_str(&item).unwrap();
-            return Ok((berry_deserialised, item_deserialised))
+            return Ok((berry_deserialised, item_deserialised));
         }
         Err(e) => Err(e),
     }
