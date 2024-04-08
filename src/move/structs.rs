@@ -6,7 +6,7 @@ pub struct Move {
     pub id: u16,
     pub accuracy: u8,
     pub pp: u8,
-    pub power: u8,
+    pub power: Option<u8>,
     pub effect_chance: Option<i8>,
     pub effect_entries: Vec<EffectEntry>,
     pub flavor_text_entries: Vec<FlavorTextEntry>,

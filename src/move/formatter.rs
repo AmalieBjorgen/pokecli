@@ -14,7 +14,7 @@ fn beautify_move_output(move_json: &Move) {
     println!("---------------------------------------");
     println!("Name: {}", english_name.name);
     println!("Type: {}", move_json.r#type.name);
-    println!("Power: {}", move_json.power);
+    println!("Power: {}", move_json.power.unwrap_or_else(|| 0));
     println!("Damage Class: {}", move_json.damage_class.name);
     println!("PP: {}", move_json.pp);
     println!("Accuracy: {}", move_json.accuracy);
