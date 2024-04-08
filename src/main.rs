@@ -11,6 +11,8 @@ mod berry;
 mod item;
 mod r#move;
 mod ability;
+mod utils;
+
 
 #[tokio::main]
 async fn main() {
