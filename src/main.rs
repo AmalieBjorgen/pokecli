@@ -10,7 +10,6 @@ mod ability;
 mod berry;
 mod item;
 mod r#move;
-mod ability;
 mod utils;
 mod pokemon;
 
