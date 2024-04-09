@@ -21,3 +21,4 @@ Cargo.lock
 .idea/vcs.xml
 .idea/pokecli.iml
 .idea/modules.xml
+/.idea
